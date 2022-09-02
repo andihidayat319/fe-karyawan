@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import DepartmentAddPage from "./views/DepartmentPageAdd ";
+import HomePage from "./views/HomePage";
+import JabatanAddPage from "./views/JabatanAddPage";
+import KaryawanPageAdd from "./views/KaryawanPageAdd";
 
-function App() {
+export default function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/karyawan/add" element={<KaryawanPageAdd />}/>
+        {/* <Route path="/karyawan/edit/:id" element={}/> */}
+        <Route path="/department/add" element={<DepartmentAddPage />}/>
+        <Route path="/jabatan/add" element={<JabatanAddPage />}/>
+      </Routes>
+    </>
+  )
+};

@@ -1,0 +1,7 @@
+export const GET_DEPARTMENTS = 'GET_DEPARTMENTS'
+export const GET_JABATANS = 'GET_JABATANS'
+export const GET_JABATAN = 'GET_JABATAN'
+export const GET_KARYAWANS = 'GET_KARYAWANS'
+export const UPDATE_KARYAWAN = 'UPDATE_KARYAWAN'
+export const SET_LOADING = 'SET_LOADING'
+export const SET_ERROR = 'SET_ERROR'
